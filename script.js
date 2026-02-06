@@ -148,13 +148,17 @@ function copyBibTeX() {
       document.querySelector("#imageCarousel"),
       3000
     );
-    const videoCarousel = new Carousel(
-      document.querySelector("#videoCarousel"),
-      5000
+    const successCarousel = new Carousel(
+      document.querySelector("#successCarousel"),
+      3000
+    );
+    const failureCarousel = new Carousel(
+      document.querySelector("#failureCarousel"),
+      3000
     );
 
     // Add touch support
-    const carousels = [imageCarousel, videoCarousel];
+    const carousels = [imageCarousel, successCarousel, failureCarousel];
     carousels.forEach((carousel) => {
       let touchStartX = 0;
       let touchEndX = 0;
