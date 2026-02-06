@@ -39,6 +39,7 @@ function copyBibTeX() {
       this.setupEventListeners();
       this.startAutoPlay();
       this.updateCarousel();
+      window.addEventListener("resize", () => this.updateCarousel());
     }
 
     createIndicators() {
@@ -88,11 +89,8 @@ function copyBibTeX() {
     }
 
     updateCarousel() {
-      const offset =
-        -this.currentIndex *
-        (100 / this.slidesPerView) *
-        this.slidesPerView;
-      this.track.style.transform = `translateX(${offset}%)`;
+      const offsetPx = -this.currentIndex * this.container.clientWidth;
+      this.track.style.transform = `translateX(${offsetPx}px)`;
 
       const indicators = Array.from(this.indicators.children);
       indicators.forEach((indicator, index) => {
