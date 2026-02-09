@@ -183,12 +183,10 @@
     -->
 
     <div class="content-section" id="translation_results">
-      <!-- <h2>Translation Examples</h2>
-        <img src="Assets/fig3.jpg" alt="Slide 1" style="max-width: 90%; height: auto; display: block; margin: 0 auto;"/>
-    </div> -->
-
+      <h2>Data Augmentation with MANGO</h2>
+    We generate diverse-viewpoint demonstrations from simulation then translate them to diverse-viewpoint real-world demonstrations. The image translation model is only trained on fixed-viewpoint real-world data.
     <!-- 3 Images Carousel -->
-    <h3>Fixed-Camera Demonstrations</h3>
+    <h3>Fixed-Camera Real Demonstrations</h3>
     <div class="carousel-container" id="imageCarousel">
       <div class="carousel-track">
         <div class="carousel-slide">
@@ -337,9 +335,21 @@
       <button class="carousel-button next">→</button>
       <div class="carousel-indicators"></div>
     </div>
+    <h3>Sim2Real Translated Diverse-Viewpoint Demonstrations</h3>
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <video
+        src="Assets/translation_mosaic_final.webm"
+        autoplay
+        loop
+        muted
+        playsinline
+        style="width: 100%; height: auto; display: block;"
+      ></video>
+    </div>
 
     <div class="content-section" id="robot_results">
       <h2>Robot Experiments</h2>
+      In this section, we show rollouts of imitation learning policies trained on MANGO-augmented data. The observations come from perturbed cameras.
       <h3>Stack Blocks</h3>
     <div class="carousel-container" id="blocksCarousel">
       <div class="carousel-track">
